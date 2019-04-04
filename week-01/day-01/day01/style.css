@@ -1,0 +1,25 @@
+body {
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url("topography.png");
+    }
+header{
+        font-family: 'Roboto';
+        background-color: #333333;
+    }
+    li {
+        display: inline;
+    }
+    ul{
+        float:right;
+    }
+    ul {
+        margin: 0px;
+        padding: 0px;
+    }
+    li a {
+        color: #ff0099;
+    }
+h2 {
+    color: #ff0099;
+}
