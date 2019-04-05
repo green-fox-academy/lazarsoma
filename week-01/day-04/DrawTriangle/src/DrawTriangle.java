@@ -1,17 +1,19 @@
 import java.util.Scanner;
 
 public class DrawTriangle {
-    public static void main (String [] args) {
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println ("Please enter your number:");
+        System.out.println("Please enter how many lines has the sqaure:");
         int myNumber = input.nextInt();
 
-        for (int i = 1; i < myNumber + 1; i++) {
-            for (int j = i; j < i + 1; j++);
-            System.out.print ("*");
-        }
+        for (int i = 1; i <= myNumber; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("%");
+            }
             System.out.println("");
+            }
         }
     }
+
 
 
