@@ -1,9 +1,9 @@
 public class GreeterFunction {
-  public static void main (String [] args){
+  public static void main(String [] args){
     String al = "Greenfox";
     System.out.println(greet(al));
   }
-  public static String greet (String al) {
+  public static String greet(String al) {
     return "Greetings dear," + al;
   }
 }
