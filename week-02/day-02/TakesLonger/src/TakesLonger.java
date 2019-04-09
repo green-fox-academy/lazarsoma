@@ -6,7 +6,7 @@ public class TakesLonger {
     System.out.println(sb);
   }
 }
-    
+
 
 
 
