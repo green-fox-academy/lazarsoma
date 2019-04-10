@@ -4,30 +4,18 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class GoToCenter {
+public class CenteredSquare {
+
   public static void mainDraw(Graphics graphics) {
+    // Draw a green 10x10 square to the canvas' center.
 
 
-    // Create a line drawing function that takes 3 parameters:
-    // The x and y coordinates of the line's starting point and the graphics
-    // and draws a line from that point to the center of the canvas.
-    // Draw 3 lines with that function. Use loop for that.
-  int x = 5;
-  int y = 5;
-  draw(x, y, graphics);
 
-  for (int i = 0; i < 2; i++) {
-    graphics.drawLine(0, i * 10, WIDTH/2, HEIGHT /2);
-  }
-
-  }
-  public static void draw(int x, int y, Graphics g) {
-        g.drawLine(x, y, WIDTH / 2, HEIGHT / 2);
   }
 
   // Don't touch the code below
-  static int WIDTH = 1920;
-  static int HEIGHT = 1080;
+  static int WIDTH = 320;
+  static int HEIGHT = 320;
 
   public static void main(String[] args) {
     JFrame jFrame = new JFrame("Drawing");
