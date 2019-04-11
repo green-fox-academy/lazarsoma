@@ -3,7 +3,7 @@ public class MaximumFinder {
 
     int myArrays[] = {2, 6, 5, 3, 1};
     int n = myArrays.length;
-    //int findMax = findMax(myArrays, 5)
+
     System.out.println(findMax(myArrays, 5));
 
   }
