@@ -1,10 +1,10 @@
 public class Fibonacci {
   public static void main(String[] args) {
 
-    int j = 0;
-    while (j < 10) {
-      System.out.println(fibonacci(j));
-      j++;
+    int i = 0;
+    while (i < 5) {
+      System.out.println(fibonacci(i));
+      i++;
     }
   }
   public static int fibonacci(int i) {
