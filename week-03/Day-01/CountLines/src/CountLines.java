@@ -10,12 +10,9 @@ public class CountLines {
   public static void main(String[] args) throws IOException {
     System.out.println("Enter filename here : ");
 
-    String sFilename;
-
     Scanner scanIn = new Scanner(System.in);
-    sFilename = scanIn.nextLine();
+    String sFilename = scanIn.nextLine();
 
-    scanIn.close();
     System.out.println(sFilename);
 
     try {
@@ -25,7 +22,6 @@ public class CountLines {
       lnr.skip(Long.MAX_VALUE);
       System.out.println("The number of lines: " + lnr.getLineNumber());
     } catch (FileNotFoundException e) {
-      e.printStackTrace();
       System.out.println("zero");
     }
   }
