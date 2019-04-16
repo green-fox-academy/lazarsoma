@@ -21,6 +21,7 @@ public class CountLines {
       LineNumberReader lnr = new LineNumberReader(fr);
       lnr.skip(Long.MAX_VALUE);
       System.out.println("The number of lines: " + lnr.getLineNumber());
+
     } catch (FileNotFoundException e) {
       System.out.println("zero");
     }
