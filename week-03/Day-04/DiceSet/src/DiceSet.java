@@ -29,6 +29,8 @@ ArrayList<Integer> list;
       System.out.println(one);
     }
 
+    while (list.get(0) == 6) {
+
     for (int i = 1; i < 7; i++) {
       int rand = (int) (Math.random() * range) + min;
 

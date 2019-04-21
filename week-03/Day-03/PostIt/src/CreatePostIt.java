@@ -1,16 +1,19 @@
 public class CreatePostIt {
   public static void main(String [] args) {
-    PostIt orange;
-    orange = new PostIt("Idea 1", "orange", "blue");
-    orange.printOrange();
+    PostIt orange = new PostIt("Idea 1", "orange", "blue");
+    orange.printColor();
+    orange.printText();
+    orange.printTextColor();
 
-    PostIt pink;
-    pink = new PostIt("Awesome", "pink", "black");
-    pink.printPink();
+    PostIt pink = new PostIt("Awesome", "pink", "black");
+    pink.printColor();
+    pink.printText();
+    pink.printTextColor();
 
-    PostIt yellow;
-    yellow = new PostIt("Superb!", "yellow", "green");
-    yellow.printYellow();
+    PostIt yellow = new PostIt("Superb!", "yellow", "green");
+    yellow.printColor();
+    yellow.printText();
+    yellow.printTextColor();
 
   }
 }

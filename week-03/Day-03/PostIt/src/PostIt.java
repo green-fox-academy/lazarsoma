@@ -9,14 +9,14 @@ public class PostIt {
     this.backGroundColor = backGroundColor;
     this.textColor = colorText;
   }
- public void printOrange() {
-    System.out.println("orange");
+ public void printColor() {
+    System.out.println(this.backGroundColor);
  }
- public void printPink() {
-    System.out.println("pink");
+ public void printText() {
+    System.out.println(this.text);
   }
- public void printYellow() {
-    System.out.println("yellow");
+ public void printTextColor() {
+    System.out.println(this.textColor);
   }
 }
 
