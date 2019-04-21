@@ -1,13 +1,39 @@
 public class Counter {
-  int myNumber = 0;
-  int addNumber;
-  int addOne;
-  int getValue;
+  int myNumber;
+
+
 
   public Counter() {
+    this.myNumber = 0;
+    System.out.println(myNumber);
 
   }
-  public int addMore()  {
+  public Counter(int myNumber) {
+    this.myNumber = myNumber;
+    System.out.println(myNumber);
+
+  }
+  public void addNumber(int Number) {
+    this.myNumber = myNumber + Number;
+
+    System.out.println(myNumber);
+  }
+  public void add(){
+    this.myNumber++;
+    System.out.println(myNumber);
+  }
+  public int get(){
+
+    System.out.println(myNumber);
+    return myNumber;
+  }
+  public void reset(){
+    myNumber = 0;
+    System.out.println(myNumber);
+
+  }
+
+  /*public int addMore()  {
     int Number = 10;
      addNumber = myNumber + Number;
     System.out.println(addNumber);
@@ -26,6 +52,6 @@ public class Counter {
   public void reset() {
     this.myNumber = 0;
     System.out.println(myNumber);
-  }
+  }*/
 
 }
