@@ -11,17 +11,17 @@ public class BlogPost {
     this.text = text;
     this.publicatonDate = publicatonDate;
   }
-
-  public void printBlog1(){
-      System.out.println("Blog1");
+  public void printAuthorname(){
+      System.out.println(this.authorName);
   }
-
-  public void printBlog2(){
-    System.out.println("Blog2");
+  public void printPublicationDate(){
+    System.out.println(this.publicatonDate);
   }
-
-  public void printBlog3(){
-    System.out.println("Blog3");
+  public void printText(){
+    System.out.println(this.text);
+  }
+  public void printTite() {
+    System.out.println(this.title);
   }
 
 }
