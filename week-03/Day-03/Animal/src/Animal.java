@@ -1,27 +1,27 @@
 public class Animal {
-  Integer hunger;
-  Integer thirst;
+  int hunger;
+  int thirst;
 
-  public Animal(int hunger, int thirst) {
-    this.hunger = hunger;
-    this.thirst = thirst;
+  public Animal() {
+    this.hunger = 50;
+    this.thirst = 50;
   }
 
   public void eat() {
-    int eat = hunger - 1;
-    System.out.println(eat);
+    this.hunger--;
+    System.out.println(hunger);
   }
 
   public void drink() {
-    int drink = thirst - 1;
-    System.out.println(drink);
+    this.thirst--;
+    System.out.println(thirst);
   }
 
   public void play() {
-    int eat = hunger +1;
-    int drink = thirst + 1;
-    System.out.println(eat);
-    System.out.println(drink);
+    this.hunger--;
+    this.thirst--;
+    System.out.println("hunger: " + hunger);
+    System.out.println("thirst " + thirst);
   }
 }
 
