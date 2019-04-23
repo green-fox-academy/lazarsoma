@@ -12,12 +12,12 @@ public class FleetOfThings {
     Thing obstacles = new Thing("Remove obstacles");
     Thing stand     = new Thing("Stand up");
     Thing lunch     = new Thing("Eat lunch");
-    stand.complete();
-    lunch.complete();
     fleet.add(milk);
     fleet.add(obstacles);
     fleet.add(stand);
     fleet.add(lunch);
+    stand.complete();
+    lunch.complete();
 
     System.out.println(fleet);
   }
