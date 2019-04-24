@@ -4,12 +4,12 @@ public class BassGuitar extends StringedInstrument {
 
   public BassGuitar(){
     this.numberOfStrings = 4;
-    this.name = "BassGuitar";
+    this.name = "Bass Guitar";
   }
 
   public BassGuitar (int numberOfStrings) {
     this.numberOfStrings = numberOfStrings;
-    this.name = "BassGuitar";
+    this.name = "Bass Guitar";
   }
 
   @Override
