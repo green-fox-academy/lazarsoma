@@ -5,6 +5,7 @@ public class Fibonacci {
     while (i < 5) {
       System.out.println(fibonacci(i));
       i++;
+
     }
   }
   public static int fibonacci(int i) {
