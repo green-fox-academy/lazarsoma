@@ -6,7 +6,5 @@ public class TeacherAndStudents {
     teacher.teach(student);
     student.question(teacher);
 
-
-
   }
 }

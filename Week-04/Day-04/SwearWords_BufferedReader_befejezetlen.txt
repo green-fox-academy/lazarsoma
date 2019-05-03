@@ -1,0 +1,71 @@
+package SwearWords;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.Map;
+import java.util.HashMap;
+
+public class SwearWords {
+
+  public static void main(String args[]) {
+
+    String[] theKeywords = {"fuck", "bloody", "cock", "shit", "fucker", "fuckstick", "asshole", "dick", "piss", "cunt"};
+    // put each keyword in the map with value 0
+    Map<String, Integer> theKeywordCount = new HashMap<>();
+    for (String str : theKeywords) {
+      theKeywordCount.put(str, 0);
+    }
+
+    FileReader fr;
+    BufferedReader br;
+    File file = new File("assets/content");
+
+    // attempt to open and read file
+    try {
+      fr = new FileReader(file);
+      br = new BufferedReader(fr);
+
+      String sLine;
+
+      // read lines until reaching the end of the file
+      while ((sLine = br.readLine()) != null) {
+
+        // if an empty line was read
+        if (sLine.length() != 0) {
+          String[] row = sLine.split(" ");
+          // extract the words from the current line in the file
+          if (theKeywordCount.containsKey(row)) {
+           // theKeywordCount.put(sLine, theKeywordCount.get(sLine) + 1);
+            System.out.println(theKeywordCount.toString());
+          }
+          if (theKeywordCount.equals(row)) {
+            row.
+          }
+        }
+      }
+
+    } catch (FileNotFoundException exception) {
+      // Unable to find file.
+      exception.printStackTrace();
+    } catch (IOException exception) {
+      // Unable to read line.
+      exception.printStackTrace();
+    } finally {
+      //br.close();
+    }
+
+    // count how many times each keyword was encontered
+    int occurrences = 0;
+    for (Integer i : theKeywordCount.values()) {
+      occurrences += i;
+    }
+
+    System.out.println("\n\nTotal occurences in file: " + occurrences);
+  }
+}

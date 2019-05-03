@@ -18,8 +18,8 @@ public class Animal {
   }
 
   public void play() {
-    this.hunger--;
-    this.thirst--;
+    this.hunger++;
+    this.thirst++;
     System.out.println("hunger: " + hunger);
     System.out.println("thirst " + thirst);
   }

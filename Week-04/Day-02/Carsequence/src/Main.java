@@ -6,8 +6,5 @@ public class Main {
     System.out.println(g.charAt(6));
     System.out.println(g.length());
     System.out.println(g.subSequence(2, 5));
-
-
-
   }
 }

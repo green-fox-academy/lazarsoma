@@ -13,7 +13,7 @@ public class Logs {
   public static void main(String[] args) {
 
     IP("assets/log.txt");
-
+    ratio("assets/log.txt");
   }
 
   public static void IP(String fileName) {
@@ -39,6 +39,32 @@ public class Logs {
     } catch (IOException e) {
       e.printStackTrace();
       System.out.println("Unable to read file: my-file.txt");
+    }
+  }
+
+  public static void ratio(String fileName) {
+    Path file = Paths.get(fileName);
+
+    try {
+      List<String> originalData = Files.readAllLines(file);
+      List<String> POST = new ArrayList<>();
+      for (String s : originalData) {
+        if (s.contains("POST")) {
+          POST.add(s);
+        }
+      }
+      List<String> GET = new ArrayList<>();
+      for (String s : originalData) {
+        if (s.contains("GET")) {
+          GET.add(s);
+        }
+      }
+      double GPratio = (double)GET.size() / (double)POST.size();
+      double PGratio = (double)POST.size() / (double)GET.size();
+      System.out.println(GPratio);
+      System.out.println(PGratio);
+    } catch (IOException e) {
+      System.out.println("nope");
     }
   }
 }

@@ -1,7 +1,7 @@
 public class Gnirts implements CharSequence {
 
   String myString;
-  CharSequence charSequence = "LazarSoma";
+  CharSequence charSequence;
 
   public Gnirts() {
     //myString = "LazarSoma";
@@ -14,7 +14,7 @@ public class Gnirts implements CharSequence {
     StringBuilder input2 = new StringBuilder();
     input2.append("LazarSoma");
     input2 = input2.reverse();
-    charSequence = input2.toString();
+    charSequence = input2;
   }
 
   @Override

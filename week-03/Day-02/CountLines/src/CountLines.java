@@ -1,29 +1,24 @@
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.LineNumberReader;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Scanner;
+import java.util.List;
 
 public class CountLines {
-  public static void main(String[] args) throws IOException {
-    System.out.println("Enter filename here : ");
+  public static void main(String[] args) {
+    // Write a function that takes a filename as string,
+    // then returns the number of lines the file contains.
+    // It should return zero if it can't open the file, and
+    // should not raise any error.
+    System.out.println(lineCounter("assets/filename.txt"));
+  }
 
-    Scanner scanIn = new Scanner(System.in);
-    String sFilename = scanIn.nextLine();
-
-    System.out.println(sFilename);
-
+  public static int lineCounter(String fileName) {
     try {
-      Path filePath = Paths.get("assets/filename.txt");
-      FileReader fr = new FileReader(String.valueOf(filePath));
-      LineNumberReader lnr = new LineNumberReader(fr);
-      lnr.skip(Long.MAX_VALUE);
-      System.out.println("The number of lines: " + lnr.getLineNumber());
-
-    } catch (FileNotFoundException e) {
-      System.out.println("zero");
+      Path filePath = Paths.get(fileName);
+      List<String> lines = Files.readAllLines(filePath);
+      return lines.size();
+    } catch (Exception e) {
+      return 0;
     }
   }
 }
