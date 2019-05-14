@@ -17,7 +17,7 @@ public class SwearWords {
   }
 
   public static int censor(String file,List<String> removeableWords){
-    Path filePath = Paths.get(file);
+      Path filePath = Paths.get(file);
     int count = 0;
 
     try {

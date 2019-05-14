@@ -26,7 +26,7 @@ public class Logs {
       ArrayList<String> UniqueIPs = new ArrayList<>();
       for (String line : lines) {
         System.out.println(line);
-        IPs.add(line.substring(27, 38));
+        IPs.add(line.substring(12, 27));
       }
       for (String str : IPs) {
         if (!UniqueIPs.contains(str)) {
