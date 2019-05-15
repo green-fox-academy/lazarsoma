@@ -5,7 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
-<p th:text="'Hello, ' + ${name} + '! This site was was loaded '
-    + ${count} + ' times since last server start.'"></p>
+<th:block th:each="hello : ${hellos}">
+    <p th:style="${hello.getStyle()}" th:text="${hello.getText()}"></p>
+</th:block>
 </body>
 </html>
