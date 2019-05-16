@@ -1,0 +1,37 @@
+table {
+    width: 600px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    border: 40px solid dodgerblue;
+
+}
+
+th {
+    text-align: left;
+    background: rgba(10, 10, 10, 0.93);
+    font-size: 22px;
+    color: grey;
+}
+
+td {
+    color: grey;
+    font-size: 18px;
+}
+
+table, th, td {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 20px;
+    border: 2px solid #9f9f9f;
+}
+
+tr:nth-child(odd) {
+    background-color: rgba(198, 198, 198, 0.57);
+}
+
+
+
