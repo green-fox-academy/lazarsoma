@@ -8,21 +8,15 @@ import java.util.stream.Collectors;
 
 public class Wiki2 {
   public static void main(String[] args) throws Exception {
-    Map<String, Integer> wc =
-            Files.lines(Paths.get( "assets/dunbarhotel"))
-                    .map(Pattern.compile("\\p{Punct}")::matcher)
-                    .map(matcher -> matcher.replaceAll(""))
-                    .flatMap(Pattern.compile("\\s+")::splitAsStream)
-                    .filter(Pattern.compile("^\\w+$").asPredicate())
-                    .filter(s -> s.length() >= 2)
-                    .map(s -> s.toLowerCase())
-                    .collect(Collectors.groupingBy(w -> w,
-                            Collectors.summingInt(w -> 1)));
-
-    wc.entrySet()
+    Files.lines(Paths.get("assets/dunbarhotel"))
+            .flatMap(Pattern.compile("\\W+")::splitAsStream)
+            .filter(s -> s.length() >= 2)
+            .map(String::toLowerCase)
+            .collect(Collectors.groupingBy(w->w, Collectors.summingInt(w->1)))
+            .entrySet()
             .stream()
             .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
-            .limit(20)
+            .limit(10)
             .forEach(e -> System.out.println(e.getKey() + ": " + e.getValue()));
   }
 }
