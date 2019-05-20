@@ -14,12 +14,14 @@
         <th>BALANCE</th>
         <th>ANIMALTYPE</th>
         <th>CURRENCY</th>
+        <th>INDEX</th>
     </tr>
     <tr th:each="bankAccount : ${bankAccountList}">
         <td th:text="${bankAccount.getName()}"></td>
         <td th:text="${bankAccount.getBalance()}"></td>
         <td th:text="${bankAccount.getAnimalType()}"></td>
         <td th:text="${bankAccount.getCurrency()}"></td>
+        <td th:text="${bankAccountStat.index}"></td>
     </tr>
 </table>
 
