@@ -12,4 +12,11 @@ public class Controllers {
     model.addAttribute(new BankAccount("Simba",2000, "lion", "Zebra"));
     return "index";
   }
+
+  @GetMapping("/text")
+  public String text(Model model) {
+    String text = "This is an <em>HTML</em> text. <b>Enjoy yourself!</b>";
+    model.addAttribute("text", text);
+    return "text";
+  }
 }
