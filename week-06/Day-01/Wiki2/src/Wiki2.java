@@ -10,7 +10,7 @@ public class Wiki2 {
   public static void main(String[] args) throws Exception {
     Files.lines(Paths.get("assets/dunbarhotel"))
             .flatMap(Pattern.compile("\\W+")::splitAsStream)
-            .filter(s -> s.length() >= 2)
+            .filter(s -> s.length() >= 4)
             .map(String::toLowerCase)
             .collect(Collectors.groupingBy(w->w, Collectors.summingInt(w->1)))
             .entrySet()
