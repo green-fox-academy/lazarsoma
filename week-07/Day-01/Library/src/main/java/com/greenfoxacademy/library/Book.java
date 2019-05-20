@@ -33,4 +33,24 @@ public class Book {
   public String getAuthor(){
     return author;
   }
+
+  public static void setNextID(int nextID) {
+    Book.nextID = nextID;
+  }
+
+  public void setId(int id) {
+    this.id = id;
+  }
+
+  public void setTitle(String title) {
+    this.title = title;
+  }
+
+  public void setAuthor(String author) {
+    this.author = author;
+  }
+
+  public void setReleaseYear(int releaseYear) {
+    this.releaseYear = releaseYear;
+  }
 }

@@ -63,7 +63,7 @@ public class BookController {
   }
 
   @RequestMapping(path = "/books/add", method = RequestMethod.POST)
-  public String addBook(@ModelAttribute(name="book") Book book) {
+  public String addBook(Book book) {
     books.add(book);
     return "redirect:/books";
   }
