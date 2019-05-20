@@ -9,7 +9,7 @@ public class Controllers {
 
   @GetMapping("/show")
   public String account(Model model) {
-    model.addAttribute(new BankAccount("Simba",2000, "lion"));
+    model.addAttribute(new BankAccount("Simba",2000, "lion", "Zebra"));
     return "index";
   }
 }
