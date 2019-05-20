@@ -15,6 +15,7 @@
         <th>ANIMALTYPE</th>
         <th>CURRENCY</th>
         <th>INDEX</th>
+        <th>KING</th>
     </tr>
     <tr th:each="bankAccount : ${bankAccountList}">
         <td th:text="${bankAccount.getName()}"></td>
@@ -22,6 +23,8 @@
         <td th:text="${bankAccount.getAnimalType()}"></td>
         <td th:text="${bankAccount.getCurrency()}"></td>
         <td th:text="${bankAccountStat.index}"></td>
+        <td th:text="${bankAccount.isKing()}" th:if = "${bankAccount.isKing()}" style="color: #ffe200"></td>
+        <td th:text="${bankAccount.isKing()}" th:unless="${bankAccount.isKing()}"></td>
     </tr>
 </table>
 

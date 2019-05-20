@@ -15,7 +15,7 @@ public class Controllers {
 
   @GetMapping("/show")
   public String account(Model model) {
-    model.addAttribute(new BankAccount("Simba", 2000, "lion", "Zebra"));
+    model.addAttribute(new BankAccount("Simba", 2000, "lion", "Zebra", false));
     return "index";
   }
 
@@ -28,10 +28,10 @@ public class Controllers {
 
   @ModelAttribute
   public void setup(Model model) {
-    bankAccounts.add(new BankAccount("Timon", 1000, "meerkat", "EUR"));
-    bankAccounts.add(new BankAccount("Pumba", 1500, "warthog", "HUF"));
-    bankAccounts.add(new BankAccount("Mufasza", 3000, "lion", "EUR"));
-    bankAccounts.add(new BankAccount("Zazu", 1750, "bird", "EUR"));
+    bankAccounts.add(new BankAccount("Timon", 1000, "meerkat", "EUR", true));
+    bankAccounts.add(new BankAccount("Pumba", 1500, "warthog", "HUF", false));
+    bankAccounts.add(new BankAccount("Mufasza", 3000, "lion", "EUR", true));
+    bankAccounts.add(new BankAccount("Zazu", 1750, "bird", "EUR", false));
     model.addAttribute(bankAccounts);
   }
   @GetMapping("/list")
