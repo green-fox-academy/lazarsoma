@@ -16,6 +16,8 @@
         <th>CURRENCY</th>
         <th>INDEX</th>
         <th>KING</th>
+        <th>BADGUY</th>
+        <th>GOODGUY</th>
     </tr>
     <tr th:each="bankAccount : ${bankAccountList}">
         <td th:text="${bankAccount.getName()}"></td>
@@ -25,6 +27,14 @@
         <td th:text="${bankAccountStat.index}"></td>
         <td th:text="${bankAccount.isKing()}" th:if = "${bankAccount.isKing()}" style="color: #ffe200"></td>
         <td th:text="${bankAccount.isKing()}" th:unless="${bankAccount.isKing()}"></td>
+        <td>
+            <div th:switch="${bankAccount.getGuy()}"></p>
+                <p th:case="'GoodGuy'">GoodGuy</p>
+                <p th:case="'BadGuy'">BadGuy</p>
+            </div>
+        </td>
+        <td th:text="'GoodGuy'" th:if = "${bankAccount.getGuy() == 'GoodGuy'}"></td>
+        <td th:text="'BadGuy'" th:unless="${bankAccount.getGuy() == 'GoodGuy'}"></td>
     </tr>
 </table>
 
