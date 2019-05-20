@@ -39,5 +39,9 @@ public class Controllers {
     model.addAttribute(bankAccounts);
     return "list";
   }
+  @GetMapping("/othercolor")
+  public String color(){
+    return "list";
+  }
 }
 
