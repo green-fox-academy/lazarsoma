@@ -53,7 +53,6 @@ public class Controllers {
 
   @RequestMapping(path = "/balance", method = RequestMethod.GET)
   public String balance() {
-
     return "list";
   }
 
@@ -68,7 +67,6 @@ public class Controllers {
         }
       }
     }
-
     return "list";
   }
 }
