@@ -7,8 +7,7 @@ import org.springframework.stereotype.Service;
 @Qualifier("GreenColor")
 public class GreenColor implements MyColor {
   @Override
-  public String printColor() {
+  public void printColor() {
     System.out.println("It is green in color...");
-    return printColor();
   }
 }
