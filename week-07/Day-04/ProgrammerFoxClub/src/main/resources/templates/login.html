@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+  <h1>Welcome to Programmer Fox Club!</h1>
+  <div>Please provide a name, so you can associate it to your pet!</div>
+
+  <div>
+      <form th:action="@{/login}" method="post">
+          Name:
+          <input type = "text" name = "name">
+
+          <button type="submit">GO</button>
+      </form>
+  </div>
+
+</body>
+</html>
