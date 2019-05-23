@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div>
+    <ul>
+        <li> <a href="http://localhost:8080/nutritionStore/index">Information</a> </li>
+        <li> <a href="http://localhost:8080/nutritionStore">Nutrition Store</a> </li>
+    </ul>
+  </div>
+  <div>
+      <form th:action="@{/nutritionStore}" method="post">
+      <select name="Food">
+          <option value="hamburger">Volvo</option>
+          <option value="salad">Saab</option>
+          <option value="pizza">Fiat</option>
+      </select>
+      <select name="Drink">
+          <option value="water">Volvo</option>
+          <option value="cola">Saab</option>
+          <option value="beer">Fiat</option>
+      </select>
+      <button type="submit">Change</button>
+      </form>
+  </div>
+
+
+</body>
+</html>

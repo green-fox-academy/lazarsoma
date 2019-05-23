@@ -15,6 +15,8 @@ public class Fox {
 
   public Fox(String name){
     this.name = name;
+    this.drinks = Drinks.cola;
+    this.foods = Foods.hamburger;
    }
 
   public String getName() {
