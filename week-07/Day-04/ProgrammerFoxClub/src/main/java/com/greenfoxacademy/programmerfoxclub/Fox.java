@@ -12,9 +12,7 @@ public class Fox {
   private Food food;
 
   String name;
-  List<Tricks> listTricks = new ArrayList<>();
-  //String food;
-  //String drink;
+  List<Tricks> listTricks;
 
   public Fox() {
 
@@ -22,8 +20,9 @@ public class Fox {
 
   public Fox(String name) {
     this.name = name;
-    drink.name = "cola";
-    food.name = "hamburger";
+    drink = new Drink("beer");
+    food = new Food("hamburger");
+    listTricks = new ArrayList<>();
   }
 
   public String getName() {

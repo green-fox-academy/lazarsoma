@@ -6,8 +6,12 @@ import org.springframework.stereotype.Service;
 public class Food {
   String name;
 
-  public Food () {
+  public Food() {
 
+  }
+
+  public Food(String name) {
+    this.name = name;
   }
 
   public String getName() {
@@ -16,5 +20,10 @@ public class Food {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  @Override
+  public String toString() {
+    return name;
   }
 }

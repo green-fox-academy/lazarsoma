@@ -7,22 +7,23 @@ import java.util.List;
 
 
 @Service
-public class FoxList {
-  List<Fox> foxes = new ArrayList<>();
+public class FoxService {
+  List<Fox> foxes;
 
-  public FoxList() {
-
+  public FoxService() {
+    foxes = new ArrayList<>();
   }
 
   public void addFox(String name) {
     foxes.add(new Fox(name));
   }
 
-  public Fox getFoxes(String name) {
+  public Fox findFoxByName(String name) {
     for (Fox fox : foxes) {
-      if (fox.getName() != name) {
+      if (fox.getName().equals(name)) {
         return fox;
       }
-    } return null;
+    }
+    return null;
   }
 }
