@@ -14,7 +14,6 @@ public class FoxController {
   @Autowired
   private FoxList foxlist;
 
-
   @RequestMapping(path = "/nutritionStore", method = RequestMethod.GET)
   public String index(@RequestParam(required = false) String name, Model model) {
 
@@ -29,8 +28,8 @@ public class FoxController {
  }
 
   @RequestMapping(path = "/nutritionStore", method = RequestMethod.POST)
-  public String login(String name, String food, String drink) {
-    foxlist.addFox(name);
+  public String login(String name, Food food, Drink drink) {
+
     foxlist.getFoxes(name).setFood(food);
     foxlist.getFoxes(name).setDrink(drink);
     return "redirect:/index?name=" + name;

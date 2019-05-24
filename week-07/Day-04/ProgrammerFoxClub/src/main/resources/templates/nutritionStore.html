@@ -13,20 +13,20 @@
   </div>
   <div>
       <form th:action="@{/nutritionStore}" method="post">
-          Food:
-          <input type="text" name="foods" list="foodname">
-          <datalist id="foodname">
-              <option value="hamburger">
-              <option value="pizza">
-              <option value="salad">
-          </datalist>
-          Drink:
-          <input type="text" name="drinks" list="drinkname">
-          <datalist id="drinkname">
-              <option value="cola">
-              <option value="beer">
-              <option value="water">
-          </datalist>
+          <label>Food</label>
+          <select name ="food" th:type="text">
+              <option th:each="food : ${food}"
+                      th:value="${food}"
+                      th:text="${food}"
+              ></option>
+          </select>
+          <label>Drink</label>
+          <select name ="drink" th:type="text">
+              <option th:each="drink : ${drink}"
+                      th:value="${drink}"
+                      th:text="${drink}"
+              ></option>
+          </select>
       <button type="submit">Change</button>
       </form>
   </div>

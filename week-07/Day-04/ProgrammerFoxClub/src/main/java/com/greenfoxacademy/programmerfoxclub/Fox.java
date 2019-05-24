@@ -1,23 +1,30 @@
 package com.greenfoxacademy.programmerfoxclub;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Fox {
+
+  @Autowired
+  private Drink drink;
+  private Food food;
+
   String name;
   List<Tricks> listTricks = new ArrayList<>();
-  String food;
-  String drink;
+  //String food;
+  //String drink;
 
   public Fox() {
 
   }
 
-  public Fox(String name){
+  public Fox(String name) {
     this.name = name;
-    this.drink = "cola";
-    this.food = "hamburger";
-   }
+    drink.name = "cola";
+    food.name = "hamburger";
+  }
 
   public String getName() {
     return name;
@@ -35,19 +42,19 @@ public class Fox {
     this.listTricks = listTricks;
   }
 
-  public String getFood() {
-    return food;
-  }
-
-  public void setFood(String food) {
-    this.food = food;
-  }
-
-  public String getDrink() {
+  public Drink getDrink() {
     return drink;
   }
 
-  public void setDrink(String drink) {
+  public void setDrink(Drink drink) {
     this.drink = drink;
+  }
+
+  public Food getFood() {
+    return food;
+  }
+
+  public void setFood(Food food) {
+    this.food = food;
   }
 }
