@@ -13,16 +13,20 @@
   </div>
   <div>
       <form th:action="@{/nutritionStore}" method="post">
-      <select name="Food">
-          <option value="hamburger">Volvo</option>
-          <option value="salad">Saab</option>
-          <option value="pizza">Fiat</option>
-      </select>
-      <select name="Drink">
-          <option value="water">Volvo</option>
-          <option value="cola">Saab</option>
-          <option value="beer">Fiat</option>
-      </select>
+          Food:
+          <input type="text" name="foods" list="foodname">
+          <datalist id="foodname">
+              <option value="hamburger">
+              <option value="pizza">
+              <option value="salad">
+          </datalist>
+          Drink:
+          <input type="text" name="drinks" list="drinkname">
+          <datalist id="drinkname">
+              <option value="cola">
+              <option value="beer">
+              <option value="water">
+          </datalist>
       <button type="submit">Change</button>
       </form>
   </div>

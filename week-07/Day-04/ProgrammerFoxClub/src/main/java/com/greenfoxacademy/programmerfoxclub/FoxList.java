@@ -20,7 +20,7 @@ public class FoxList {
 
   public Fox getFoxes(String name) {
     for (Fox fox : foxes) {
-      if (fox.getName().equals(name)) {
+      if (fox.getName() != name) {
         return fox;
       }
     } return null;

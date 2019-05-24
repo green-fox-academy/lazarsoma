@@ -8,15 +8,15 @@
 
   <div>
       <ul>
-          <li> <a href="http://localhost:8080/nutritionStore/index">Information</a> </li>
-          <li> <a href="http://localhost:8080/nutritionStore">Nutrition Store</a> </li>
+          <li> <a th:href="@{/index}">Information</a> </li>
+          <li> <a th:href="@{/nutritionStore/(name=${fox.name})}">Nutrition Store</a> </li>
       </ul>
   </div>
   <div>
-      <img src="greenfox.png" alt="greenfox.png">
+      <img src="/greenfox.png" alt="greenfox.png">
   </div>
   <div>
-      <p th:text = "'This is ' + ${fox.name} + '. Currently living on ' + ${fox.foods} + ' and ' + ${fox.drinks}+ '. He knows ' + ${fox.listTricks.size()} + ' tricks.'"></p>
+      <p th:text = "'This is ' + ${fox.name} + '. Currently living on ' + ${fox.food} + ' and ' + ${fox.drink}+ '. He knows ' + ${fox.listTricks.size()} + ' tricks.'"></p>
   </div>
   <h1>Known Tricks</h1>
   <div>
