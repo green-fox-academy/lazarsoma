@@ -1,11 +1,9 @@
 package com.greenfoxacademy.todos.controller;
 
-import com.greenfoxacademy.todos.model.Todo;
 import com.greenfoxacademy.todos.service.ITodoService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class TodoController {

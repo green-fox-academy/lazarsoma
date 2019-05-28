@@ -22,9 +22,12 @@ public class TodosApplication implements CommandLineRunner {
   @Override
   public void run(String... args) throws Exception {
 
-    iTodoRepository.save(new Todo("Start the day"));
+    /*iTodoRepository.save(new Todo("Start the day"));
     iTodoRepository.save(new Todo("Finish H2 workshop1"));
     iTodoRepository.save(new Todo("Finish JPA workshop2"));
     iTodoRepository.save(new Todo("Create a CRUD project"));
+    iTodoRepository.save(new Todo("Wake up"));
+    iTodoRepository.save(new Todo("Go home"));*/
+
   }
 }
