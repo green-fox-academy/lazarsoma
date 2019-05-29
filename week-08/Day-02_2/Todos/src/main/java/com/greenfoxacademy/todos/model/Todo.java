@@ -1,9 +1,6 @@
 package com.greenfoxacademy.todos.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Todo {
@@ -11,8 +8,11 @@ public class Todo {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private long id;
+  @Column(nullable = false)
   private String title;
+  @Column(nullable = false)
   private boolean urgent;
+  @Column(nullable = false)
   private boolean done;
 
   public Todo() {

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<HTML xmlns:th="http://www.thymeleaf.org"
+      lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>todo CRUD app</title>
+</head>
+
+<style>
+    td {
+        border-style: solid;
+        border-width: 1px;
+    }
+</style>
+
+<body>
+<div id="title">
+    <h1>Todos for today:</h1>
+</div>
+<a href="/todo/add">Add new todo</a>
+<div id="list">
+    <table>
+        <thead>
+        <tr style="font-weight: bold">
+            <th>CREATED</th>
+            <th>ID</th>
+            <th>ACTION</th>
+            <th>DONE</th>
+            <th>URGENT</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="todo: ${todos}">
+            <td th:text="${todo.getCreated()}"/>
+            <td th:text="${todo.id}"/>
+
+            <td>
+                <a th:text="${todo.title}" th:href="@{'/todo/' + ${todo.id}}"/>
+            </td>
+            <td th:text="${todo.done}" th:style="${todo.done}
+                    ? ${'background-color: #abcc72;'}
+                    : ${'background-color: #e8aeae'}"/>
+            <td th:text="${todo.urgent}"
+                th:style="${todo.urgent}
+                    ? ${'background-color: #abcc72;'}
+                    : ${'background-color: #e8aeae'}"/>
+            <td>
+                <a th:href="@{'/todo/' + ${todo.id} + '/delete'}">delete</a>
+            </td>
+            <td>
+                <a th:href="@{'/todo/' + ${todo.id} + '/edit'}">edit</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <form th:action="@{'/todo'}" th:method="put">
+        <input type="radio" name="isActive" value="true">Things that need doing<br>
+        <input type="radio" name="isActive" value="false">Things that are already done<br>
+        <button type="submit">Show me</button>
+    </form>
+    <a th:href="@{'/todo'}">Home</a>
+
+</div>
+
+</body>
+</HTML>
