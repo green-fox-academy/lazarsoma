@@ -13,4 +13,6 @@ public interface ITodoService {
   void save(Todo todo);
 
   void delete(long id);
+
+  Iterable<Todo> listTodosByTitle(String title);
 }

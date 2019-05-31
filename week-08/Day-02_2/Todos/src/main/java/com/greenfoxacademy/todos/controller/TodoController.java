@@ -15,7 +15,7 @@ public class TodoController {
   ITodoRepository iTodoRepository;
 
   private ITodoService iTodoService;
-  //private ITodoRepository iTodoRepository;
+
 
   public TodoController(ITodoService iTodoService) {
     this.iTodoService = iTodoService;
@@ -28,7 +28,7 @@ public class TodoController {
   }
 
   @GetMapping("/todo")
-  public String list(Model model, @RequestParam(required= false) boolean isActive) {
+  public String list(Model model, @RequestParam(required = false) boolean isActive) {
     if (isActive) {
       model.addAttribute("todos", iTodoRepository.noneDone());
     } else {
@@ -65,5 +65,11 @@ public class TodoController {
   public String editDo(@ModelAttribute Todo todo) {
     this.iTodoRepository.save(todo);
     return "redirect:/todolist";
+  }
+
+  @GetMapping("/todolist/search")
+  public String showTodosByTitle(@RequestParam(value = "search", required = false) String title, Model model) {
+    model.addAttribute("search", iTodoService.listTodosByTitle(title));
+    return "todolistSearched";
   }
 }

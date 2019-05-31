@@ -36,7 +36,11 @@ public class TodoServiceImp implements ITodoService{
   @Override
   public void delete(long id) {
     todoRepository.deleteById(id);
+  }
 
+  @Override
+  public Iterable<Todo> listTodosByTitle(String title) {
+    return todoRepository.findByTitleContains(title);
   }
 }
 

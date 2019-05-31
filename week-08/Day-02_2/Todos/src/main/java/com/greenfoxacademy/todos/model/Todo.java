@@ -15,6 +15,9 @@ public class Todo {
   @Column(nullable = false)
   private boolean done;
 
+  @ManyToOne
+  private Assignee assignee;
+
   public Todo() {
 
   }

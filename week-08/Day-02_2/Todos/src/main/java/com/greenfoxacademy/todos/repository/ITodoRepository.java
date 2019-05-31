@@ -14,4 +14,6 @@ public interface ITodoRepository extends CrudRepository<Todo,Long> {
 
   @Query("select todo from Todo todo where todo.done = false")
   List<Todo> noneDone();
+
+  Iterable<Todo> findByTitleContains(String title);
 }

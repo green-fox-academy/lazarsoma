@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<HTML xmlns:th="http://www.thymeleaf.org"
+      lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>todo CRUD app add</title>
+</head>
+<body>
+<div id="title">
+    <h1>Add new assignee</h1>
+</div>
+
+<form th:action="@{'/assignee/add'}" th:method="POST" th:object="${assignee}">
+    <input type="text" th:field="*{name}" required/>
+    <input type="text" th:field="*{email}" required/>
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
