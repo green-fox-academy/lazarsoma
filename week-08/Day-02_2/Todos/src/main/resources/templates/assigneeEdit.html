@@ -10,7 +10,7 @@
     <h1>Edit assignee</h1>
 </div>
 
-<form th:action="@{'/assignee/' + ${assignee.getId()} + '/edit'}" th:method="POST" th:object="${assignee}">
+<form th:action="@{'/assignee/' + ${assignee.getId()} + '/editAssignee'}" th:method="POST" th:object="${assignee}">
     <input type="text" th:field="*{name}" required/>
     <input type="text" th:field="*{email}" required/>
     <button type="submit">Submit</button>

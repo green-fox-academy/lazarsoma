@@ -49,7 +49,7 @@ public class TodoController {
     return "redirect:/todolist";
   }
 
-  @GetMapping("todo/{id}/delete/")
+  @GetMapping("/todo/{id}/delete")
   public String delete(@PathVariable long id) {
     iTodoRepository.deleteById(id);
     return "redirect:/todolist";
@@ -72,4 +72,7 @@ public class TodoController {
     model.addAttribute("search", iTodoService.listTodosByTitle(title));
     return "todolistSearched";
   }
+
+  /*@GetMapping("/todolist/addAssignee")
+  public String addASsignee()*/
 }

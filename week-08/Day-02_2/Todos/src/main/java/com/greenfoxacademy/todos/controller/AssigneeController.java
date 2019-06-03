@@ -44,7 +44,7 @@ public class AssigneeController {
     return "redirect:/assigneelist";
   }
 
-  @GetMapping("assignee/{id}/delete/")
+  @GetMapping("/assignee/{id}/delete")
   public String delete(@PathVariable long id) {
     iAssigneeRepository.deleteById(id);
     return "redirect:/assigneelist";
@@ -56,7 +56,7 @@ public class AssigneeController {
     return "assigneeEdit";
   }
 
-  @PostMapping("/todo/{id}/editAssignee")
+  @PostMapping("/assignee/{id}/editAssignee")
   public String editDo(@ModelAttribute Assignee assignee) {
     this.iAssigneeRepository.save(assignee);
     return "redirect:/assigneelist";

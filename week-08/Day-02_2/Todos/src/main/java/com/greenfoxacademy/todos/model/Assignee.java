@@ -1,9 +1,7 @@
 package com.greenfoxacademy.todos.model;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -21,12 +19,13 @@ public class Assignee {
   private List<Todo> todos;
 
   public Assignee() {
-
+    todos = new ArrayList<>();
   }
 
   public Assignee(String name, String email) {
     this.name = name;
     this.email = email;
+    todos = new ArrayList<>();
   }
 
   public long getId() {

@@ -14,6 +14,11 @@
     </style>
 </head>
 <body>
+
+<div>
+    <li><a th:href="@{/todolist}">Todos</a></li>
+</div>
+
 <h1>List of assignees</h1>
 <p th:if="${assignees.size()} == 0 ">No assignee added yet</p>
 
@@ -34,7 +39,7 @@
             <td th:text="${assignee.getName()}"></td>
             <td th:text="${assignee.getEmail()}"></td>
             <td><a th:href="@{'/assignee/' + ${assignee.id} + '/delete'}">delete</a></td>
-            <td><a th:href="@{'/todo/' + ${assignee.id} + '/edit'}">edit</a></td>
+            <td><a th:href="@{'/assignee/' + ${assignee.id} + '/editAssignee'}">edit</a></td>
         </tr>
         </tbody>
     </table>
